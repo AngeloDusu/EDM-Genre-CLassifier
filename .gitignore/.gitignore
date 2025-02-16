@@ -1,5 +1,8 @@
+# Ignore environment folder
 venv/
 
+# Ignore credentials
 .env
 
+# Ignore system files
 __pycache__/
