@@ -26,10 +26,10 @@ def get_tracks_by_genre_year(genre, start_year=2020, total=1000):
     offset = 0
 
     while len(track_list) < total:
-        results = sp.search(q=f'genre:{genre} year:{start_year}-2025', type='track', limit=50, offset=offset)
+        results = sp.search(q=f'genre:{genre}, year:{start_year}-2025', type='track', limit=50, offset=offset)
         tracks = results['tracks']['items']
         if not tracks:
-            break  # Jika tidak ada hasil lagi, hentikan loop
+            break
 
         for track in tracks:
             track_info = {
